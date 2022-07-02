@@ -2,7 +2,6 @@ package com.skilldistillery.jets.app;
 
 import java.util.List;
 import java.util.Scanner;
-
 import com.skilldistillery.jets.entities.AirField;
 import com.skilldistillery.jets.entities.Jet;
 import com.skilldistillery.jets.entities.JetImpl;
@@ -16,10 +15,10 @@ public class JetsApplication {
 	public void run() {
 		AirField field = new AirField();
 		JetImpl implementJet = new JetImpl();
-		field.makeFleet("jets.txt");
 		Scanner scanner = new Scanner(System.in);
 		int userChoice;
 		boolean keepGoing = true;
+		field.makeFleet("jets.txt");
 
 		while(keepGoing) {
 		System.out.println("---PLEASE MAKE A SELECTION---");
@@ -54,10 +53,11 @@ public class JetsApplication {
 			field.enterWarpSpeed();
 			break;
 		case 7:
-			
+			field.addaircraft(scanner);
 			break;
 		case 8:
-			
+			field.displayAircraft();
+			field.deleteAircraft(scanner);
 			break;
 		case 9:
 			System.out.println("Thank you, have a good day!");

@@ -19,7 +19,7 @@ public class JetImpl extends Jet{
 	public void fly() {
 		double timeInFlight;
 		timeInFlight = getRange() / getSpeed();
-		System.out.println("This " + getType() + ", " + getModel() + " can fly for: " + timeInFlight + " hours.");
+		System.out.println("This " + getType() + ", " + getModel() + " can fly for: " + timeInFlight + " hours at its top speed.");
 	}
 
 }

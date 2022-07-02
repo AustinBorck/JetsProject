@@ -7,6 +7,15 @@ public abstract class Jet {
 	int range;
 	long price;
 	
+	public Jet(String type, String model, double speed, int range, long price) {
+		super();
+		this.type = type;
+		this.model = model;
+		this.speed = speed;
+		this.range = range;
+		this.price = price;
+	}
+
 	public abstract void fly();
 	
 	public Jet() {
