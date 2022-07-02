@@ -1,11 +1,10 @@
 package com.skilldistillery.jets.entities;
 
-public class Passenger extends Jet{
-
-	public Passenger() {
+public class Fighter extends Jet implements CombatReady{
+	public Fighter() {
 		super();
 	}
-	public Passenger(String type, String model, double speed, int range, long price) {
+	public Fighter(String type, String model, double speed, int range, long price) {
 		
 	}
 	@Override
@@ -14,6 +13,7 @@ public class Passenger extends Jet{
 		timeInFlight = getRange() / getSpeed();
 		System.out.println("This " + getType() + " " + getModel() + "can fly for: " + timeInFlight + " hours.");
 	}
+
 	
-	
+
 }

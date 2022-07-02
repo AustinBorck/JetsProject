@@ -1,11 +1,10 @@
 package com.skilldistillery.jets.entities;
 
-public class Passenger extends Jet{
-
-	public Passenger() {
+public class UFO extends Jet implements WarpSpeed{
+	public UFO() {
 		super();
 	}
-	public Passenger(String type, String model, double speed, int range, long price) {
+	public UFO(String type, String model, double speed, int range, long price) {
 		
 	}
 	@Override
