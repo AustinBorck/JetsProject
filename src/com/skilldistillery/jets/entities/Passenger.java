@@ -12,7 +12,8 @@ public class Passenger extends Jet{
 	public void fly() {
 		double timeInFlight;
 		timeInFlight = getRange() / getSpeed();
-		System.out.println("This " + getType() + " " + getModel() + "can fly for: " + timeInFlight + " hours.");
+		System.out.println("CHUGGA CHUGGA CHUGGA");
+		System.out.println("This " + getType() + " " + getModel() + " can fly for: " + timeInFlight + " hours.");
 	}
 	
 	

@@ -16,7 +16,7 @@ public class JetsApplication {
 	public void run() {
 		AirField field = new AirField();
 		JetImpl implementJet = new JetImpl();
-		field.makeFleet();
+		field.makeFleet("jets.txt");
 		Scanner scanner = new Scanner(System.in);
 		int userChoice;
 		boolean keepGoing = true;
@@ -28,7 +28,7 @@ public class JetsApplication {
 		System.out.println("3. View the fastest aircraft.");
 		System.out.println("4. View the aircraft with the longest range.");
 		System.out.println("5. MAKE FIGHTERS COMBAT READY");
-		System.out.println("6. ENTER WARP SPEED");
+		System.out.println("6. ENTER LUDICROUS SPEED");
 		System.out.println("7. Add an aircraft to the fleet.");
 		System.out.println("8. Remove an aircraft from the fleet.");
 		System.out.println("9. QUIT");
@@ -39,19 +39,19 @@ public class JetsApplication {
 			field.displayAircraft();
 			break;
 		case 2:
-			implementJet.fly();
+			field.fly();
 			break;
 		case 3:
-			
+			field.fastestJet();
 			break;
 		case 4:
-			
+			field.longestRange();
 			break;
 		case 5:
-			
+			field.combatReady();
 			break;
 		case 6:
-			
+			field.enterWarpSpeed();
 			break;
 		case 7:
 			

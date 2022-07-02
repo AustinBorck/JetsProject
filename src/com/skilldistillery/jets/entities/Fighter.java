@@ -11,9 +11,21 @@ public class Fighter extends Jet implements CombatReady{
 	public void fly() {
 		double timeInFlight;
 		timeInFlight = getRange() / getSpeed();
-		System.out.println("This " + getType() + " " + getModel() + "can fly for: " + timeInFlight + " hours.");
+		System.out.println("ZOOOOOOOOOOOOM!");
+		System.out.println("This " + getType() + " " + getModel() + " can fly for: " + timeInFlight + " hours.");
+	}
+	@Override
+	public void loadGuns() {
+		System.out.println(getModel() + " LOADING THE 50...");
+		System.out.println(" LOADING THE ROCKETS...");
+		System.out.println(" LOADED AND READY TO STAGE");
+	}
+	@Override
+	public void stageAircraft() {
+		System.out.println(" MOVING TO STAGING AREA...");
+		System.out.println(getModel() + " IS NOW STAGED AND READY FOR COMBAT");
+		System.out.println();
 	}
 
-	
 
 }

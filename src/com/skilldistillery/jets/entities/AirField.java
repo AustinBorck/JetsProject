@@ -9,10 +9,10 @@ import java.util.List;
 public class AirField {
 	private List<Jet> fleet = new ArrayList<>();
 
-	public void makeFleet() {
+	public void makeFleet(String file) {
 //		String file = "jets.txt";
 
-		try (BufferedReader bufIn = new BufferedReader(new FileReader("jets.txt"))) {
+		try (BufferedReader bufIn = new BufferedReader(new FileReader(file))) {
 			String line;
 			while ((line = bufIn.readLine()) != null) {
 				String[] split = line.split(",");
@@ -21,11 +21,11 @@ public class AirField {
 				double speed = Double.parseDouble(split[2]);
 				int range = Integer.parseInt(split[3]);
 				long price = Long.parseLong(split[4]);
-				if(split[0].equals("UFO")) {
+				if(type.equals("UFO")) {
 					fleet.add(new UFO(type, model, speed, range, price));
-				}else if(split[0].equals("Fighter")) {
+				}else if(type.equals("Fighter")) {
 					fleet.add(new Fighter(type, model, speed, range, price));
-				}else if(split[0].equals("Passenger")) {
+				}else if(type.equals("Passenger")) {
 					fleet.add(new Passenger(type, model, speed, range, price));
 				}
 			}
@@ -42,4 +42,65 @@ public class AirField {
 			
 			}
 	}
+	public void fly() {
+		for (Jet jet : fleet) {
+			jet.fly();
+		}
+	}
+	public void fastestJet() {
+		String fastJet = "";
+		double speed = 0;
+		for (Jet jet : fleet) {
+			if(speed < jet.getSpeed()) {
+				speed = jet.getSpeed();
+				fastJet = jet.getModel();
+			}
+		}
+		System.out.println("The fastest aircraft is: " + fastJet + " which can travel at: " + speed + " MPH!");
+	}
+	public void longestRange() {
+		String longRange = "";
+		double range = 0;
+		for (Jet jet : fleet) {
+			if(range < jet.getRange()) {
+				range = jet.getRange();
+				longRange = jet.getModel();
+			}
+		}
+		System.out.println("The aircraft with the longest range is " + longRange + " which can fly for " + range + " miles!");
+	}
+	
+	public void combatReady() {
+		for (Jet jet : fleet) {
+			if(jet instanceof CombatReady) {
+				((Fighter) jet).loadGuns();
+				((Fighter) jet).stageAircraft();
+			}
+		}
+	}
+	public void enterWarpSpeed() {
+		for (Jet jet : fleet) {
+			if(jet instanceof WarpSpeed) {
+				((UFO) jet).prepForWarp();
+				((UFO) jet).engageWarp();
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
