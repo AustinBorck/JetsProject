@@ -1,9 +1,10 @@
 package com.skilldistillery.jets.entities;
 
-public class JetImpl extends Jet{
+public class JetImpl extends Jet {
 	AirField fleet = new AirField();
+
 	public JetImpl() {
-		
+
 	}
 
 	public JetImpl(String type, String model, double speed, int range, long price) {
@@ -19,7 +20,7 @@ public class JetImpl extends Jet{
 	public void fly() {
 		double timeInFlight;
 		timeInFlight = getRange() / getSpeed();
-		System.out.println("This " + getType() + ", " + getModel() + " can fly for: " + timeInFlight + " hours at its top speed.");
+		System.out.println(
+				"This " + getType() + ", " + getModel() + " can fly for: " + timeInFlight + " hours at its top speed.");
 	}
-
 }

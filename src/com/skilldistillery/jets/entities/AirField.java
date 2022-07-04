@@ -123,5 +123,4 @@ public class AirField {
 		int aircraftToBeDeleted = scanner.nextInt();
 		fleet.remove(aircraftToBeDeleted - 1);
 	}
-
 }
