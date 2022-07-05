@@ -33,6 +33,13 @@ public class Fighter extends Jet implements CombatReady {
 	public void stageAircraft() {
 		System.out.println(" MOVING TO STAGING AREA...");
 		System.out.println(getModel() + " IS NOW STAGED AND READY FOR COMBAT");
-		System.out.println();
+		System.out.println("              _____                        ");
+		System.out.println("   |         /_____|         /~~~|         ");
+		System.out.println("  _:_______|/'(..)`\\_______/  | |         ");
+		System.out.println(" <_|``````  \\__~~__/  USAF ___|_|         ");
+		System.out.println("   :\\_____(=========,(*),--\\_|_/         ");
+		System.out.println("   |       \\       /---'                  ");
+		System.out.println("             | (*) /                       ");
+		System.out.println("             |____/                        ");
 	}
 }

@@ -33,6 +33,10 @@ public class UFO extends Jet implements WarpSpeed {
 	public void engageWarp() {
 		System.out.println(" BRRRRRRRRRRRRRRR ZOOOOOOM! AIRCRAFT HAS GONE TO PLAID!");
 		System.out.println(" LUDICROUS SPEED SUCCESSFUL, NICE WORK CAPTAIN. ");
+		System.out.println("        _.---._"      );
+		System.out.println("      .'       '."    );
+		System.out.println("  _.-~===========~-._");
+		System.out.println(" (___________________)");
 		System.out.println();
 
 	}
